@@ -2,96 +2,96 @@ module Katas.Potter where
 
 import Test.Hspec
 
-countNonZeroBooks :: [(Int, Int)] -> Int
-countNonZeroBooks [] = 0 
-countNonZeroBooks [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] = 0 
-countNonZeroBooks ( ( _, b ): xs ) = if b > 0
-                                     then 1 + (countNonZeroBooks xs) 
-                                     else countNonZeroBooks xs 
+-- FUNCTION decreaseNumberOfBooks
+-- Decrease the number of books for every exemplar in one when it has at least one book
+-- Example: decreaseNumberOfBooks (1, 1) returns (1, 0)
+-- Example: decreaseNumberOfBooks (1, 0) returns (1, 0)
+decreaseNumberOfBooks :: [(Int, Int)] -> [(Int, Int)]
 
--- NonNeroBooksSpec
-countNonZeroBooksSpec :: Spec
-countNonZeroBooksSpec = do
-  describe "countNonZeroBooks" $ do
-    it "returns 0 when all non book is in the list" $ do
-      countNonZeroBooks [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` 0
-    it "returns 1 when one of the books in the serie was bought" $ do
-      countNonZeroBooks [(1, 1), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` 1
-    it "returns 2 when two books of the serie was bought" $ do
-      countNonZeroBooks [(1, 1), (2, 1), (3, 0), (4, 0), (5,0)] `shouldBe` 2
-    it "returns 5 when five books of the serie was bought" $ do
-      countNonZeroBooks [(1, 1), (2, 1), (3, 1), (4, 1), (5,1)] `shouldBe` 5
+decreaseNumberOfBooks [] = []
+decreaseNumberOfBooks ( (a, b): xs ) = if b > 0
+                                      then (a, b -1) : decreaseNumberOfBooks xs
+                                      else (a, b) : decreaseNumberOfBooks xs
 
-decreaseNonZeroBooks :: [(Int, Int)] -> [(Int, Int)]
-decreaseNonZeroBooks [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] = [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)]
-decreaseNonZeroBooks [] = []
-decreaseNonZeroBooks ( (a, b): xs ) = if b > 0
-                                      then (a, b -1) : decreaseNonZeroBooks xs
-                                      else (a, b) : decreaseNonZeroBooks xs
-
--- decrease non zero books specifications
-decreaseNonZeroBooksSpec :: Spec
-decreaseNonZeroBooksSpec = do
-  describe "decreaseNonZeroBooks" $ do
+-- Specifications for the function decreaseNumberOfBooks
+decreaseNumberOfBooksSpec :: Spec
+decreaseNumberOfBooksSpec = do
+  describe "decreaseNumberOfBooks" $ do
     it "returns does not change the list when there is no book" $ do
-      decreaseNonZeroBooks [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)]
+      decreaseNumberOfBooks [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)]
     it "returns the list of books decrease by one" $ do
-      decreaseNonZeroBooks [(1, 1), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)]
+      decreaseNumberOfBooks [(1, 1), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)]
     it "returns the list of books decrease by one when some books are more than once" $ do
-      decreaseNonZeroBooks [(1, 1), (2, 4), (3, 2), (4, 3), (5,3)] `shouldBe` [(1, 0), (2, 3), (3, 1), (4, 2), (5,2)]
+      decreaseNumberOfBooks [(1, 1), (2, 4), (3, 2), (4, 3), (5,3)] `shouldBe` [(1, 0), (2, 3), (3, 1), (4, 2), (5,2)]
+    it "returns the list of books decrease by one when the list of books is incomplete" $ do
+      decreaseNumberOfBooks [(1, 1)] `shouldBe` [(1, 0)]
 
-makeGroups :: [(Int, Int)] -> [Int]
+-- FUNCTION makeGroupOfBooks
+-- Return the groups of books in a list
+-- Example: makeGroupOfBooks [(1, 1), (2, 1)] returns [2]
+makeGroupOfBooks :: [(Int, Int)] -> [Int]
 
-makeGroups [(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] = [0]
-makeGroups (xs) = (countNonZeroBooks xs): makeGroups(decreaseNonZeroBooks xs)
+makeGroupOfBooks [] = [0]
+makeGroupOfBooks (xs) = if lengthNonZeroBooks == 0
+                        then [0]
+                        else (lengthNonZeroBooks): makeGroupOfBooks(decreaseNumberOfBooks nonZeroBooks)
+                        where
+                          nonZeroBooks = filter (\ (_, b) -> b > 0) xs
+                          lengthNonZeroBooks = length nonZeroBooks
 
--- make groups specifications
-
-makeGroupsSpec :: Spec
-makeGroupsSpec  = do
-  describe "makeGroups" $ do
+-- Specifications for the function makeGroupOfBooks
+makeGroupOfBooksSpec :: Spec
+makeGroupOfBooksSpec  = do
+  describe "makeGroupOfBooks" $ do
     it "returns [0] when there is no book" $ do
-      makeGroups[(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` [0]
+      makeGroupOfBooks[(1, 0), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` [0]
     it "returns the groups of books with zero at the end" $ do
-      makeGroups[(1, 2), (2, 3), (3, 1), (4, 2), (5,1)] `shouldBe` [5, 3, 1, 0]
+      makeGroupOfBooks[(1, 2), (2, 3), (3, 1), (4, 2), (5,1)] `shouldBe` [5, 3, 1, 0]
+    it "returns the groups of books when the list of books is incomplete" $ do
+      makeGroupOfBooks[(1, 2), (2, 3)] `shouldBe` [2, 2, 1, 0]
 
-calculatePriceForGroup :: [Int] -> Double
+-- FUNCTION calculatePriceForGroupOfBooks
+-- Calculate the lowest price for a list of different books
+-- See the specifications for examples 
+calculatePriceForGroupOfBooks :: [Int] -> Double
 
-calculatePriceForGroup [] = 0
-calculatePriceForGroup (0: xs) = calculatePriceForGroup xs
-calculatePriceForGroup (1: xs) = 8 + calculatePriceForGroup xs
-calculatePriceForGroup (2: xs) = 2 * 8 * 0.95 + calculatePriceForGroup xs
-calculatePriceForGroup (3: xs) = 3 * 8 * 0.90 + calculatePriceForGroup xs
-calculatePriceForGroup (4: xs) = 4 * 8 * 0.80 + calculatePriceForGroup xs
-calculatePriceForGroup (5:3: xs) = calculatePriceForGroup (4:4: xs)
-calculatePriceForGroup (5: xs) = 5 * 8 * 0.75 + calculatePriceForGroup xs
+calculatePriceForGroupOfBooks [] = 0
+calculatePriceForGroupOfBooks (0: xs) = calculatePriceForGroupOfBooks xs
+calculatePriceForGroupOfBooks (1: xs) = 8 + calculatePriceForGroupOfBooks xs
+calculatePriceForGroupOfBooks (2: xs) = 2 * 8 * 0.95 + calculatePriceForGroupOfBooks xs
+calculatePriceForGroupOfBooks (3: xs) = 3 * 8 * 0.90 + calculatePriceForGroupOfBooks xs
+calculatePriceForGroupOfBooks (4: xs) = 4 * 8 * 0.80 + calculatePriceForGroupOfBooks xs
+calculatePriceForGroupOfBooks (5:3: xs) = calculatePriceForGroupOfBooks (4:4: xs)
+calculatePriceForGroupOfBooks (5: xs) = 5 * 8 * 0.75 + calculatePriceForGroupOfBooks xs
+calculatePriceForGroupOfBooks (_:_) = error "Invalid group of books"
 
--- calculate price for group specifications
-
-calculatePriceForGroupSpec :: Spec
-calculatePriceForGroupSpec  = do
+-- Specificatons for function calculatePriceForGroupOfBooks 
+calculatePriceForGroupOfBooksSpec :: Spec
+calculatePriceForGroupOfBooksSpec  = do
   describe "calculate price for group" $ do
     it "returns 0 when there is no book" $ do
-      calculatePriceForGroup [0] `shouldBe` 0 
+      calculatePriceForGroupOfBooks [0] `shouldBe` 0 
     it "returns 8 when there is one book" $ do
-      calculatePriceForGroup [1] `shouldBe` 8
+      calculatePriceForGroupOfBooks [1] `shouldBe` 8
     it "returns 51.2 when there is one group of five and one of 3" $ do
-      calculatePriceForGroup [5, 3] `shouldBe` 51.2
+      calculatePriceForGroupOfBooks [5, 3] `shouldBe` 51.2
     it "returns 81.2 when there is one group of two five and one of 3" $ do
-      calculatePriceForGroup [5, 5, 3] `shouldBe` 81.2
+      calculatePriceForGroupOfBooks [5, 5, 3] `shouldBe` 81.2
 
-calculatePrice :: [(Int, Int)] -> Double
+-- FUNCTION calculatePriceForBooks
+-- Calculate the lowest price for a list of books
+-- See the specifications for examples
+calculatePriceForBooks :: [(Int, Int)] -> Double
 
-calculatePrice xs = calculatePriceForGroup(makeGroups xs)
+calculatePriceForBooks xs = calculatePriceForGroupOfBooks(makeGroupOfBooks xs)
 
--- calculate price specifications
-
-calculatePriceSpec :: Spec
-calculatePriceSpec  = do
+-- Specifications for calculatePriceForBooks
+calculatePriceForBooksSpec :: Spec
+calculatePriceForBooksSpec  = do
   describe "calculate price" $ do
     it "returns 8 when there is one book" $ do
-      calculatePrice [(1, 1), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` 8 
+      calculatePriceForBooks [(1, 1), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` 8 
     it "returns 16 when there are two books from the same exemplar" $ do
-      calculatePrice [(1, 2), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` 16 
+      calculatePriceForBooks [(1, 2), (2, 0), (3, 0), (4, 0), (5,0)] `shouldBe` 16 
     it "returns 16 when there are two books from the same exemplar" $ do
-      calculatePrice [(1, 2), (2, 2), (3, 2), (4, 1), (5,1)] `shouldBe` 51.2 
+      calculatePriceForBooks [(1, 2), (2, 2), (3, 2), (4, 1), (5,1)] `shouldBe` 51.2 

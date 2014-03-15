@@ -6,8 +6,7 @@ import Test.Hspec
 
 main :: IO ()
 main = hspec $ do
-  countNonZeroBooksSpec
-  decreaseNonZeroBooksSpec
-  makeGroupsSpec 
-  calculatePriceForGroupSpec
-  calculatePriceSpec 
+  decreaseNumberOfBooksSpec
+  makeGroupOfBooksSpec 
+  calculatePriceForGroupOfBooksSpec
+  calculatePriceForBooksSpec
