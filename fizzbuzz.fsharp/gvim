@@ -1,0 +1,500 @@
+    2  ./site clean
+    3  ./site build
+    4  ./site build
+    5  ./site build
+    6  ./site clean
+    7  ./site build
+    8  ./site clean
+    9  ./site build
+   10  ./site clean
+   11  ./site build
+   12  sass
+   13  find / -name sass
+   14  sudo brew install sass
+   15  brew
+   16  brew install sass
+   17  brew search sass
+   18  ruby
+   19  gem install sass
+   20  sudo gem install sass
+   21  sass
+   22  ls
+   23  ./site build
+   24  ./site clean
+   25  ./site build
+   26  ./site watch
+   27  ./site clena
+   28  ./site clean
+   29  ./site build
+   30  ./site watch
+   31  grep -RHn 8d3d3d
+   32  grep -RHn "8d3d3d"
+   33  grep -RHn 8d3d3d
+   34  grep -RHn 8d3d3d *
+   35  grep -RHn --color 8d3d3d *
+   36  mutt
+   37  cd images/
+   38  clear
+   39  ls
+   40  mv Hegel\'s\ Holiday.jpg Hegel_holyday.jpg
+   41  ls
+   42  mv Hegel_holyday.jpg Hegels_holyday.jpg
+   43  cd ..
+   44  ls
+   45  cd templates/
+   46  ls
+   47  cd ..
+   48  ./site clean
+   49  ./site build
+   50  ./site watch
+   51  ghc -make -threaded site.js 
+   52  ghc --make -threaded site.js 
+   53  ls
+   54  ghc --make -threaded site.hs 
+   55  ./site clean
+   56  ./site build
+   57  ./site watch
+   58  ./site clean
+   59  ./site build
+   60  ./site build
+   61  ./site watch
+   62  ./site clean
+   63  ./site build
+   64  ./site watch
+   65  ./site build
+   66  ./site watch
+   67  ./site clean
+   68  ./site build
+   69  ./site watch
+   70  ./site clean
+   71  ./site build
+   72  ./site watch
+   73  ./site clean
+   74  ./site build
+   75  ./site watch
+   76  ./site clean
+   77  ./site build
+   78  ./site watch
+   79  ./site clean
+   80  ./site build
+   81  ./site watch
+   82  ./site clean
+   83  ./site build
+   84  ./site build
+   85  ./site clean
+   86  ./site build
+   87  ./site watch
+   88  cd ..
+   89  ls
+   90  cd veraustariz/
+   91  ls
+   92  ./site clean
+   93  ./site build
+   94  ./site watch
+   95  ls
+   96  oi packages list
+   97  source ~/.profile 
+   98  oi packages list
+   99  oi package list
+  100  la
+  101  cd testinggie/
+  102  oi package list
+  103  oi help
+  104  oi package src list
+  105  oi package help
+  106  oi package src list
+  107  oi package install C-Sharp-AT -g
+  108  oi package install ack-essentials -g
+  109  cd ..
+  110  ls
+  111  cd Downloads/
+  112  la
+  113  vim ack-www.oipkg 
+  114  mutt
+  115  mutt
+  116  cd ..
+  117  cd ..
+  118  cd ..
+  119  ls
+  120  cd ..
+  121  ls
+  122  cd ..
+  123  ls
+  124  git clone https://github.com/continuoustests/OpenIDE.binaries.git
+  125  oi
+  126  l
+  127  cd OpenIDE.binaries/
+  128  ls
+  129  cd ..
+  130  ls
+  131  la
+  132  gvim .profile
+  133  oi
+  134  source .profile 
+  135  oi
+  136  oi conf interpreter.exe=mono -g
+  137  oi -help
+  138  oi conf interpreter.exe=mono -g
+  139  oi conf io.fallbackmode=disabled -g
+  140  oi editor vim
+  141  oi package src list
+  142  oi init C#
+  143  oi start
+  144  oi conf default.language=C#
+  145  oi package install C-Sharp
+  146  mkdir testinggie
+  147  cd testinggie/
+  148  oi init C#
+  149  oi -help
+  150  oi help
+  151  oi help C#
+  152  oi init C#
+  153  oi help C#
+  154  oi help C-Sharp
+  155  oi help CSharp
+  156  oi help
+  157  oi help
+  158  oi package -list
+  159  oi package list
+  160  oi package install C#
+  161  oi package install C-Sharp
+  162  oi help C#
+  163  oi create console src/MyApp
+  164  ls
+  165  cd src/
+  166  ls
+  167  cd MyApp/
+  168  ls
+  169  vim Program.cs 
+  170  ls
+  171  xbuild MyApp.csproj 
+  172  ls
+  173  cd bin/
+  174  ls
+  175  cd Debug/
+  176  ls
+  177  MyApp.exe
+  178  ls
+  179  ./MyApp.exe
+  180  la
+  181  MyApp.exe
+  182  sudo MyApp.exe
+  183  MyApp.exe
+  184  mono MyApp.exe
+  185  gvim ~/.profile 
+  186  source ~/.profile
+  187  gvim ~/.profile 
+  188  source ~/.profile
+  189  mkcd test
+  190  ls
+  191  cd ..
+  192  ls
+  193  rm test
+  194  rm test -r
+  195  rm -f test
+  196  rm -r test
+  197  ls
+  198  cd ..
+  199  cd ..
+  200  cd ..
+  201  ls
+  202  cd ..
+  203  ls
+  204  la
+  205  cd .OpenIDE/
+  206  la
+  207  cd languages/
+  208  la
+  209  cd ...
+  210  cd ...
+  211  ..
+  212  ..
+  213  cd ..
+  214  mkcd test
+  215  oi init C#
+  216  la
+  217  cd .OpenIDE/
+  218  la
+  219  vim oi.config 
+  220  ..
+  221  oi editor
+  222  oi conf default.editor=vim -g
+  223  oi editor
+  224  oi create console src/MyApp
+  225  oi create console src/MyApp
+  226  oi create console src\MyApp
+  227  ls
+  228  la
+  229  oi create console src/Test
+  230  oi install package C-Sharp
+  231  history
+  232  oi package install C-Sharp
+  233  la
+  234  cd .OpenIDE/
+  235  la
+  236  cd ..
+  237  oi create console src/Test
+  238  la
+  239  oi editor
+  240  mutt
+  241  mutt
+  242  ls
+  243  cd ..
+  244  ls
+  245  mkcd OpenIdeNDC2014
+  246  git clone https://github.com/acken/NDCOslo2014.git
+  247  ls
+  248  cd NDCOslo2014/
+  249  ls
+  250  vim README.md 
+  251  vim README.md 
+  252  ..
+  253  ls
+  254  cd Documents/Diego/Projects/
+  255  ls
+  256  cd .
+  257  ls
+  258  cd ..
+  259  ls
+  260  cd github/
+  261  ls
+  262  cd dotfiles/
+  263  git pull
+  264  la
+  265  cp ~/.profile .profile 
+  266  git s
+  267  git add -A
+  268  vim
+  269  vim
+  270  vim
+  271  git push origin master
+  272  ~
+  273  la
+  274  cd Documents/Diego/
+  275  la
+  276  cd github/
+  277  la
+  278  oi script
+  279  ~
+  280  ls
+  281  cd OpenIdeNDC2014/
+  282  ls
+  283  la
+  284  cd NDCOslo2014/
+  285  ls
+  286  vim README.md 
+  287  hdutil
+  288  vim README.md 
+  289  vim README.md 
+  290  :q
+  291  oi package install ack-essentials -g
+  292  cd ..
+  293  ..
+  294  ls
+  295  cd OpenIDE.binaries/
+  296  ls
+  297  find . -name "*.oipkg"
+  298  find . -name *.oipkg
+  299  find . -name *.bat
+  300  find . -name *.exe
+  301  find . -name *.dll
+  302  find . -name \*.dll
+  303  find . -name \*.oipkg
+  304  ..
+  305  ls
+  306  cd OpenIdeNDC2014/
+  307  find . -name \*.oipkg
+  308  oi package src list
+  309  find . -name \*.oipkg
+  310  find . -name \*sck\*
+  311  find . -name \*ack\*
+  312  oi editor configured
+  313  oi package src list
+  314  oi package install ack-essentials -g
+  315  mutt
+  316  pyton
+  317  python
+  318  git pull
+  319  s
+  320  ls
+  321  cd NDCOslo2014/
+  322  git pull
+  323  dd
+  324  dd -help
+  325  dd help
+  326  cd /dev/disk1
+  327  cd /dev/disk0
+  328  cd /dev/disk0s1
+  329  cd /dev/disk0s2
+  330  cd /dev/disk0s3
+  331  sudo cd /dev/disk1
+  332  cd /dev/
+  333  ls
+  334  la
+  335  cd disk0
+  336  cd disk1
+  337  mount
+  338  cd ..
+  339  la
+  340  cd Users/
+  341  ls
+  342  cd omardiego/
+  343  ls
+  344  cd Documents/
+  345  ls
+  346  sudo diskutil unmount /dev/disk1
+  347  dd if=/dev/disk1 of=~/Netzwerk.iso bs=2048 conv=sync,notrunc
+  348  open .
+  349  open .
+  350  open ~/
+  351  sudo diskutil mount /dev/disk1
+  352  mutt
+  353  cd ..
+  354  ls
+  355  cd OpenIdeNDC2014/
+  356  ls
+  357  cd NDCOslo2014/
+  358  ls
+  359  gvim README.md 
+  360  oi package install ack-www -g
+  361  oi package install contextual-tampering -g
+  362  oi package install edit-oi-scripts -g
+  363  oi package install goto -g
+  364  oi package install sources -g
+  365  oi package install tryout -g
+  366  oi package install typesearch-extension -g
+  367  oi package install c-sharp-add-using
+  368  oi package install c-sharp-create-tested
+  369  oi package install c-sharp-editor-create
+  370  oi editor sublime
+  371  oi editor vim
+  372  cls
+  373  clear
+  374  oi editor vim
+  375  ls
+  376  oi package install c-sharp-add-using -g
+  377  oi package install c-sharp-create-tested -g
+  378  oi package install c-sharp-editor-create -g
+  379  oi editor vim
+  380  oi editor vim
+  381  history
+  382  ls
+  383  ./site clean
+  384  ./site build
+  385  ./site watch
+  386  ./site build
+  387  ./site watch
+  388  ./site clean
+  389  ./site build
+  390  ./site watch
+  391  ./site clean
+  392  ./site build
+  393  ./site watch
+  394  ./site clean
+  395  ./site build
+  396  ./site watch
+  397  ./site clean
+  398  ./site build
+  399  ./site watch
+  400  ls
+  401  la
+  402  la *.markdown
+  403  ./site clean
+  404  ./site build
+  405  ./site build
+  406  ./site clean
+  407  ./site build
+  408  ./site watch
+  409  ./site clean
+  410  history
+  411  ./site build
+  412  ./site build
+  413  ./site clean
+  414  ./site build
+  415  ./site watch
+  416  history
+  417   ghc --make -threaded site.hs
+  418  ./site clean
+  419  ./site build
+  420  ./site watch
+  421  ./site clean
+  422  ./site build
+  423  ./site watch
+  424   ghc --make -threaded site.hs
+  425  ./site clean
+  426  ./site build
+  427  ./site cl
+  428   ghc --make -threaded site.hs & site clean
+  429   ghc --make -threaded site.hs
+  430  ghc --make -threaded site.hs
+  431  ghc --make -threaded site.hs
+  432  site clean
+  433  .site clean
+  434  la
+  435  ./site clean
+  436  ./site build
+  437  ./site watch
+  438  vim README.md 
+  439  man dd
+  440  cd ~/Documents/Diego/Projects/blog/veraustariz
+  441  ls
+  442  gvim .
+  443  oi editor vim
+  444  oi editor sublime
+  445  sublime
+  446  oi editor subl
+  447  oi editor vim
+  448  oi get-lib unit.framework
+  449  git s
+  450  oi get-lib unit
+  451  oi get-lib nunit
+  452  oi get-lib nunit.framework
+  453  oi get-lib -help
+  454  open .
+  455  open ~/.
+  456  oi -help
+  457  oi package src list
+  458  mutt
+  459  ps
+  460  kill 4931
+  461  ps
+  462  kill 4997
+  463  ps
+  464  ls
+  465  cd lib
+  466  ls
+  467  vim
+  468  diskutil
+  469  diskutil list
+  470  df
+  471  cd ..
+  472  c d..
+  473  ..
+  474  ..
+  475  ls
+  476  cd Music/
+  477  ls
+  478  mkcd Netzwerk
+  479  sudo diskutil unmount /dev/disk1
+  480  dd if=/dev/disk1 of=./NetzwerkA1.iso bs=2048 conv=sync,notrunc
+  481  sudo diskutil mount /dev/disk1
+  482  sudo diskutil unmount /dev/disk1
+  483  dd if=/dev/disk1 of=./NetzwerkA1.iso bs=2048 conv=sync,notrunc
+  484  sudo diskutil mount /dev/disk1
+  485  mutt
+  486  mutt
+  487  mutt
+  488  mutt
+  489  mutt
+  490  mutt
+  491  mutt
+  492  mutt
+  493  mutt
+  494  mono
+  495  mono -V
+  496  fsharp
+  497  fsi
+  498  fsi
+  499  fsharpi
+  500  mutt
+  501  history > gvim

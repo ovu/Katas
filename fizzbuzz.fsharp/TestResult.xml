@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="/Users/omardiego/Documents/Diego/Projects/Katas/fizzbuzz.fsharp/output/fizzbuzzTests.dll" total="6" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-08-15" time="13:24:35">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.1433" os-version="Unix 13.2.0.0" platform="Unix" cwd="/Users/omardiego/Documents/Diego/Projects/Katas/fizzbuzz.fsharp" machine-name="Omars-MacBook-Pro.local" user="omardiego" user-domain="Omars-MacBook-Pro.local" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="/Users/omardiego/Documents/Diego/Projects/Katas/fizzbuzz.fsharp/output/fizzbuzzTests.dll" executed="True" result="Success" success="True" time="0.028" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="FizzBuzzGame" executed="True" result="Success" success="True" time="0.024" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="Tests" executed="True" result="Success" success="True" time="0.023" asserts="0">
+            <results>
+              <test-case name="FizzBuzzGame.Tests.When_the_number_is_3_it_should_return_fizz" executed="True" result="Success" success="True" time="0.009" asserts="1" />
+              <test-case name="FizzBuzzGame.Tests.When_the_number_is_5_it_should_return_buzz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="FizzBuzzGame.Tests.When_the_number_is_divisible_by_3_and_5_it_should_return_fizzbuzz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="FizzBuzzGame.Tests.When_the_number_is_divisible_by_3_it_should_return_fizz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="FizzBuzzGame.Tests.When_the_number_is_divisible_by_5_it_should_return_buzz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="FizzBuzzGame.Tests.When_the_number_is_not_divisible_by_3_and_5_it_should_return_the_same_number" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
