@@ -1,0 +1,13 @@
+*.suo
+*.user
+*.DotSettings
+*.exe
+*.ncrunchsolution
+*.userprefs
+
+bin/
+obj/
+packages/
+output/
+reports/
+test-results/
