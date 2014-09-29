@@ -40,9 +40,19 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PrimeNumbersTests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrimeNumbers\PrimeNumbers.fsproj">
+      <Project>{d970bda3-4768-41f6-9e6c-f945607b5a8e}</Project>
+      <Name>PrimeNumbers</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
