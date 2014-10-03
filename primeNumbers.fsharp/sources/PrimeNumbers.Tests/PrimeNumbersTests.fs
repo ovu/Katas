@@ -5,6 +5,11 @@ open System
 open PrimeNumbers
 
 [<Test>]
+let WhenNumberOneIsTestedItShouldReturnFalse() =
+  let result = IsPrimeNumber(1);
+  Assert.IsFalse(result);
+
+[<Test>]
 let WhenNumberTwoIsTestedItShouldReturnTrue() =
   let result = IsPrimeNumber(2);
   Assert.IsTrue(result);
