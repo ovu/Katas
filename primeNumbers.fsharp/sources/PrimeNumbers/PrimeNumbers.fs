@@ -1,5 +1,7 @@
 ﻿module PrimeNumbers
 
+open System
+
 type System.Int32 with 
     member x.IsDivisibleBy(divisor) = x % divisor = 0
 
@@ -12,4 +14,5 @@ let rec LeastDivisorStartingWith (startNumber:int , number:int) =
 let IsPrimeNumber(number:int) =
                   match (number) with 
                     | 1 -> false
+                    | i when i < 0 -> raise(new InvalidOperationException ("Number should be greater than zero"))
                     | _ -> LeastDivisorStartingWith(2, number) = number

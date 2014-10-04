@@ -1,13 +1,18 @@
 ﻿module PrimeNumbersTests
 
 open NUnit.Framework
-open System
 open PrimeNumbers
+open System
 
 [<Test>]
 let WhenNumberOneIsTestedItShouldReturnFalse() =
   let result = IsPrimeNumber(1);
   Assert.IsFalse(result);
+
+[<Test>]
+let WhenNumberLessThanOneIsTestedItShouldReturnInvalidOperationException() =
+  let a = 1
+  Assert.Throws<InvalidOperationException>(fun() -> IsPrimeNumber(-1) |> ignore ) |> ignore
 
 [<Test>]
 let WhenNumberTwoIsTestedItShouldReturnTrue() =
